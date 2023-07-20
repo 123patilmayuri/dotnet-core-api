@@ -32,7 +32,7 @@ jobs:
     - name: Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
       with: 
-        name: assets-for-download
+        name: assets-for-download-1.0
         path: README.md
     - uses: actions/download-artifact@v3
       id: download
