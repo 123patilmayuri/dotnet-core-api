@@ -26,4 +26,10 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: echo "$GITHUB_CONTEXT"
+      
+    - name: Pack
+      run: dotnet pack --configuration Release /p:Version=1.0.0 --no-build --output .
+    - name: Push
+      run: dotnet nuget push NuGet.Workflow.1.0.0.nupkg --source https://nuget.pkg.github.com/acraven/index.json --api-key "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"}
+ 
 
