@@ -29,11 +29,11 @@ jobs:
       
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=1.0.0 --no-build --output .
-#     - name: Upload Artifact GitHub Action
-#       uses: actions/upload-artifact@v2
-#       with: 
-#         name: assets-for-download
-#         path: README.md
+    - name: Upload Artifact GitHub Action
+      uses: actions/upload-artifact@v2
+      with: 
+        name: assets-for-download
+        path: README.md
     - uses: actions/download-artifact@v3
       id: download
       with:
