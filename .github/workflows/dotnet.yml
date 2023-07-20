@@ -29,16 +29,16 @@ jobs:
       
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=1.0.0 --no-build --output .
-    - name: Upload Artifact GitHub Action
-      uses: actions/upload-artifact@v2
-      with: 
-        name: assets-for-download-1.0
-        path: README.md
-    - uses: actions/download-artifact@v3
-      id: download
-      with:
-        name: 'assets-for-download'
-        path: tmp\README.md 
+#     - name: Upload Artifact GitHub Action
+#       uses: actions/upload-artifact@v2
+#       with: 
+#         name: assets-for-download-1.0
+#         path: README.md
+#     - uses: actions/download-artifact@v3
+#       id: download
+#       with:
+#         name: 'assets-for-download'
+#         path: tmp\README.md 
     - name: NuGet Push
       run: dotnet nuget add source --username 123patilmayuri --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/dotnet-core-api/index.json"
 
