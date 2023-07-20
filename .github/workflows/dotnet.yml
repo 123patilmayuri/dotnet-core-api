@@ -38,5 +38,5 @@ jobs:
       id: download
       with:
         name: 'assets-for-download'
-        path: README.md 
+        path: tmp\README.md 
 
