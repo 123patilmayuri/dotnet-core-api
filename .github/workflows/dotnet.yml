@@ -40,10 +40,10 @@ jobs:
 #         name: 'assets-for-download'
 #         path: tmp\README.md 
     - name: NuGet Push
-      run: dotnet nuget push "bin/Release/dotnet-core-api.1.0.0.nupkg"  --api-key https://github.com/123patilmayuri/dotnet-core-api 
-      #run: dotnet nuget add source --username 123patilmayuri --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/dotnet-core-api/index.json"
+      #run: dotnet nuget push "bin/Release/dotnet-core-api.1.0.0.nupkg"  --api-key https://github.com/123patilmayuri/dotnet-core-api 
+      run: dotnet nuget add source --username 123patilmayuri --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/123patilmayuri/dotnet-core-api/index.json"
 
-    - name: publish 
-      run: dotnet new console --name dotnet-core-api && dotnet pack --configuration Release && dotnet nuget push "bin/Release/dotnet-core-api.1.0.0.nupkg"  --api-key https://github.com/123patilmayuri/dotnet-core-api --source "github"
+#     - name: publish 
+#       run: dotnet new console --name dotnet-core-api && dotnet pack --configuration Release && dotnet nuget push "bin/Release/dotnet-core-api.1.0.0.nupkg"  --api-key https://github.com/123patilmayuri/dotnet-core-api --source "github"
         
         
